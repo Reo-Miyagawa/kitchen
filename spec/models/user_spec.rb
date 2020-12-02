@@ -19,6 +19,12 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include("Name can't be blank")
       end
 
+      it 'nameが漢字、カタカナ、ひらがな、以外では登録できない' do
+        @user.name = 'a1!{.'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Name Full-width characters")
+      end
+
       it 'emailが空だと登録できない' do
         @user.email = ""
         @user.valid?
