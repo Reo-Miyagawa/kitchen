@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
 
-Things you may want to cover:
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| name               | string     | null: false                    |
+| email              | string     | null: false, unique: true      |
+| encrypted_password | string     | null: false                    |
 
-* Ruby version
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many :kitchens
+- has_many :comments
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## kitchensテーブル
 
-* Deployment instructions
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| title              | string     | null: false                    |
+| genre_id           | integer    | null: false                    |
+| user               | references | null: false, foreign_key:true  |
 
-* ...
+### Association
+
+- belongs_to :user
+- has_many :comments
+
+
+
+
+
+## commentsテーブル
+
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| text               | text       |                                |
+| user_id            | references | null: false, foreign_key:true  |
+| kitchens_id        | references | null: false, foreign_key:true  |
+
+### Association
+
+- belongs_to :user
+- belongs_to :kitchen
