@@ -27,7 +27,11 @@
           </div>
         <%# リクエスト名 %>
           <div class="name">リクエスト名
-            <%= kitchen.name%>
+            <%= kitchen.name %>
+          </div>
+        <%# リクエストジャンル %>
+          <div class="genre">リクエストジャンル
+            <%= kitchen.genre_id.name %>
           </div>
       <% end %>
     </ul>
