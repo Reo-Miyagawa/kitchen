@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   root to: 'kitchens#index'
 
-  resources :kitchens , only: [:new]
+  resources :kitchens , only: [:new, :create]
 end
