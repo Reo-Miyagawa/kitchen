@@ -21,9 +21,15 @@
     <ul class="request-list">
       <% @kitchens.each do |kitchen| %>
         <li class="list">
-          <%= image_tag kitchen.image, class: "kitchen-img"%>
+        <%# 画像 %>
+          <div class="img">リクエスト画像
+            <P><%= image_tag kitchen.image, class: "kitchen-img"%></P>
+          </div>
+        <%# リクエスト名 %>
+          <div class="name">リクエスト名
+            <%= kitchen.name%>
+          </div>
       <% end %>
-        </li>
     </ul>
   </div>
 </div>
