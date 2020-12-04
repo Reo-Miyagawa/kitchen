@@ -13,5 +13,10 @@
     <div class="title">リクエスト料理</div>
     <%= f.text_area :title, id: "title-name", placeholder: "リクエスト料理名 (40文字まで)", maxlengs:"40" %>
   </div>
+  <%# ジャンル %>
+  <div class="new-genre">
+    <div class="genre">料理のジャンル</div>
+    <%# <%= f.collection_select %> 
+  </div>
   <% end %>
 </div>
