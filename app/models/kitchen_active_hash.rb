@@ -1,2 +1,2 @@
-class KitchenActiveHash < ApplicationRecord
+class KitchenActiveHash < ActiveHash::Base
 end
