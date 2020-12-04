@@ -1,6 +1,5 @@
 FactoryBot.define do
   factory :kitchen do
-
     name                 { 'テスト' }
     genre_id             { 1 }
     association :user

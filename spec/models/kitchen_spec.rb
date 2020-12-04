@@ -20,7 +20,7 @@ RSpec.describe Kitchen, type: :model do
       end
 
       it 'nameが空だと登録できない' do
-        @kitchen.name = ""
+        @kitchen.name = ''
         @kitchen.valid?
         expect(@kitchen.errors.full_messages).to include("Name can't be blank")
       end
@@ -28,7 +28,7 @@ RSpec.describe Kitchen, type: :model do
       it 'genre_idが空だと登録できない' do
         @kitchen.genre_id = 0
         @kitchen.valid?
-        expect(@kitchen.errors.full_messages).to include("Genre select")
+        expect(@kitchen.errors.full_messages).to include('Genre select')
       end
     end
   end

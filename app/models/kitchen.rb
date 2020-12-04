@@ -4,7 +4,7 @@ class Kitchen < ApplicationRecord
 
   with_options presence: true do
     validates :name
-    validates :genre_id, numericality: {other_than: 0, message: 'select' }
+    validates :genre_id, numericality: { other_than: 0, message: 'select' }
     validates :image
   end
 
