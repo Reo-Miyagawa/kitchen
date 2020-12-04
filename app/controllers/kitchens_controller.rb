@@ -13,6 +13,6 @@ class KitchensController < ApplicationController
   private
 
   def kitchen_params
-    params.require(:kitchen).permit(:image, :title, :genre_id).merge(user_id: current_user.id)
+    params.require(:kitchen).permit(:image, :name, :genre_id).merge(user_id: current_user.id)
   end
 end
