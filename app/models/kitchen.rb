@@ -1,6 +1,6 @@
 class Kitchen < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to_active_hash :genre_ac
+  belongs_to_active_hash :genre
 
   with_options presence: true do
     validates :name
