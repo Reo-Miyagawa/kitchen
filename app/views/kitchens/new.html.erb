@@ -18,5 +18,9 @@
     <div class="genre">料理のジャンル</div>
     <%= f.collection_select(:genre_id, GenreAc.all, :id, :name, {}, {class: "select-box", id: "select-genre"}) %> 
   </div>
+  <%# リクエスト送信ボタン %>
+  <div class="btn-contents">
+    <%= f.submit "リクエストする", class: "btn" %>
+  </div>
   <% end %>
 </div>
