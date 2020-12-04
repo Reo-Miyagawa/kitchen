@@ -8,7 +8,11 @@ class KitchensController < ApplicationController
 
   def create
     @kitchen = Kitchen.create(kitchen_params)
-  end
+    if @kitchen.save
+      redirect_to root_path
+    else
+      render :new
+    end
 
   private
 
