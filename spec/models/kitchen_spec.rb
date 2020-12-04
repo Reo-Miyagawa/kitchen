@@ -8,7 +8,7 @@ RSpec.describe Kitchen, type: :model do
   describe 'リクエスト機能' do
     context 'リクエストがうまくいくとき' do
       it 'image、name、genre_idが存在すれば登録できる' do
-        expect(@kitchen).to be_valid?
+        expect(@kitchen).to be_valid
       end
     end
 
@@ -28,7 +28,7 @@ RSpec.describe Kitchen, type: :model do
       it 'genre_idが空だと登録できない' do
         @kitchen.genre_id = 0
         @kitchen.valid?
-        expect(@kitchen.errors.full_messages).to include("Category select")
+        expect(@kitchen.errors.full_messages).to include("Genre select")
       end
     end
   end
