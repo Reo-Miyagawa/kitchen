@@ -1,5 +1,6 @@
 <div class="top">
   <div class="user">
+  <%# ログイン・ログアウト・新規登録 %>
     <% if user_signed_in? %>
       <%= link_to current_user.name, "#", class: "user_name" %>
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logaut" %>
@@ -9,8 +10,20 @@
     <% end %>
   </div>
 
-
+  <%# リクエストへ %>
   <div class="request">
     <%= link_to 'Request', new_kitchen_path, class: "menu" %>
+  </div>
+
+  <%# リクエスト一覧 %>
+  <div class="request-contents">
+    <h2 class="pick-up">リクエスト一覧</P>
+    <ul class="request-list">
+      <% @kitchens.each do |kitchen| %>
+        <li class="list">
+          <%= image_tag kitchen.image, class: "kitchen-img"%>
+      <% end %>
+        </li>
+    </ul>
   </div>
 </div>
