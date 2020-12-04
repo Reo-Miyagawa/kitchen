@@ -25,13 +25,13 @@
           <div class="img">リクエスト画像
             <P><%= image_tag kitchen.image, class: "kitchen-img"%></P>
           </div>
-        <%# リクエスト名 %>
-          <div class="name">リクエスト名
-            <%= kitchen.name %>
-          </div>
         <%# リクエストジャンル %>
-          <div class="genre">リクエストジャンル
+          <div class="genre">リクエストジャンル：
             <%= kitchen.genre.name %>
+          </div>
+        <%# リクエスト名 %>
+          <div class="name">リクエスト名：
+            <%= kitchen.name %>
           </div>
       <% end %>
     </ul>
