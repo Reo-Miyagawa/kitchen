@@ -16,7 +16,7 @@
   <%# ジャンル %>
   <div class="new-genre">
     <div class="genre">料理のジャンル</div>
-    <%= f.collection_select(:genre_id, KitchenActiveHash.all, :id, :name, {}, {class: "select-box", id: "select-genre"}) %> 
+    <%= f.collection_select(:genre_id, GenreAc.all, :id, :name, {}, {class: "select-box", id: "select-genre"}) %> 
     </div>
   <% end %>
 </div>
