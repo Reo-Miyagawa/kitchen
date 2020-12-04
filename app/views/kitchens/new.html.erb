@@ -18,7 +18,7 @@
     <div class="title">リクエスト料理</div>
     <%= f.text_area :name, id: "title-name", placeholder: "リクエスト料理名 (40文字まで)", maxlengs:"40" %>
   </div>
-  <%# リクエスト送信ボタン %>
+  <%# リクエスト送信ボタン・戻るボタン %>
   <div class="btn-contents">
     <%= f.submit "リクエストする", class: "btn" %>
     <p><%= link_to 'もどる', root_path, class: "back-btn" %></P>
