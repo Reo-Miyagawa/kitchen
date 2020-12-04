@@ -1,6 +1,8 @@
 class KitchensController < ApplicationController
   before_action :authenticate_user!, only: [:new]
-  def index; end
+  def index
+    @kitchens = Kitchen.all
+  end
 
   def new
     @kitchen = Kitchen.new
