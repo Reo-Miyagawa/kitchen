@@ -14,7 +14,7 @@
   <%# ジャンル %>
   <div class="new-genre">
     <div class="genre">料理のジャンル</div>
-    <%= f.collection_select(:genre_id, GenreAc.all, :id, :name, {}, {class: "select-box", id: "select-genre"}) %> 
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class: "select-box", id: "select-genre"}) %> 
   </div>
   <%# リクエスト名 %>
   <div class="new-name">
