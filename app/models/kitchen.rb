@@ -3,7 +3,7 @@ class Kitchen < ApplicationRecord
   belongs_to_active_hash :genre_ac
 
   with_options presence: true do
-    validates :title
+    validates :name
     validates :genre_id, numericality: {other_than: 0, message: 'select' }
     validates :image
   end
