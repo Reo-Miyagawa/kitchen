@@ -1,4 +1,4 @@
-<div class="new_request">
+<div class="new-request">
   <h2 class="order">今日のメニュー</h2>
   <%= form_with model: @kitchen, local: true do |f|%>
 
@@ -7,6 +7,11 @@
     <div class="img-text">リクエストイメージ</div>
     <div class="click-upload"><p>クリックしてファイルをアップロード</p></div>
     <%= f.file_field :image, id: "item-image" %>
+  </div>
+  <%# リクエスト名 %>
+  <div class="new-name">
+    <div class="title">リクエスト料理</div>
+    <%= f.text_area :title, id: "title-name", placeholder: "リクエスト料理名 (40文字まで)", maxlengs:"40" %>
   </div>
   <% end %>
 </div>
