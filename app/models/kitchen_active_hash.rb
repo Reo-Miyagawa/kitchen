@@ -1,0 +1,2 @@
+class KitchenActiveHash < ApplicationRecord
+end
