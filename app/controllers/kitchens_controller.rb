@@ -7,5 +7,6 @@ class KitchensController < ApplicationController
   end
 
   def create
+    @kitchen = Kitchen.create(kitchen_params)
   end
 end
