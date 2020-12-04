@@ -1,6 +1,8 @@
 class KitchensController < ApplicationController
   before_action :authenticate_user!, only: [:new]
-  def index; end
+  def index
+    @kitchens = Kitchen.all.order('created_at DESC')
+  end
 
   def new
     @kitchen = Kitchen.new
