@@ -3,6 +3,7 @@
   <%= link_to 'リクエストの編集', edit_kitchen_path(@kitchen.id), method: :get, class: "request-edit-btn" %>
   <%= link_to 'リクエストの削除', kitchen_path(@kitchen.id), method: :delete, class: 'request-delete-btn' %>
   <% end %>
+  
   <table class="detail-table">
     <tr>
       <th class="detail-request">リクエスト者</th>
