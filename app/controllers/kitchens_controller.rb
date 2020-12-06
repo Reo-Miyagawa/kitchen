@@ -26,6 +26,11 @@ class KitchensController < ApplicationController
   end
 
   def destroy
+    @kitchen = Kitchen.find(params[:id])
+      if current_user.id == @kitchen.user_id
+        @kitchen.destroy
+        redirect_to root_path
+      end
   end
 
   private
