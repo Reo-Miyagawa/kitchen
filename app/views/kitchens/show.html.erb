@@ -1,0 +1,25 @@
+<div class="request-show">
+  <% if user_signed_in? && current_user.id == @kitchen.user_id %>
+  <%= link_to 'リクエストの編集', edit_kitchen_path(@kitchen.id), method: :get, class: "request-edit-btn" %>
+  <%= link_to 'リクエストの削除', kitchen_path(@kitchen.id), method: :delete, class: 'request-delete-btn' %>
+  <% end %>
+  
+  <table class="detail-table">
+    <tr>
+      <th class="detail-request">リクエスト者</th>
+      <td class="detail-value"><%= @kitchen.user.name %></td>
+    </tr>
+    <tr>
+      <th class="detail-request">リクエスト名</th>
+      <td class="detail-value"><%= @kitchen.name %></td>
+    </tr>
+    <tr>
+      <th class="detail-request">リクエストジャンル</th>
+      <td class="detail-value"><%= @kitchen.genre.name%></td>
+    </tr>
+    <tr>
+      <th class="detail-image">リクエスト画像</th>
+      <td class="detail-img"><%= image_tag @kitchen.image %></td>
+    </tr>
+  </table>
+</div>

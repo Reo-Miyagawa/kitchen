@@ -22,8 +22,10 @@
       <% @kitchens.each do |kitchen| %>
         <li class="list">
         <%# 画像 %>
+          <%= link_to kitchen_path(kitchen.id) do %>
           <div class="img">リクエスト画像
             <P><%= image_tag kitchen.image, class: "kitchen-img"%></P>
+          <% end %>
           </div>
         <%# リクエストジャンル %>
           <div class="genre">リクエストジャンル：

@@ -1,5 +1,6 @@
 class KitchensController < ApplicationController
   before_action :authenticate_user!, only: [:new]
+
   def index
     @kitchens = Kitchen.all.order('created_at DESC')
   end
@@ -15,6 +16,21 @@ class KitchensController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @kitchen = Kitchen.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def destroy
+    @kitchen = Kitchen.find(params[:id])
+      if current_user.id == @kitchen.user_id
+        @kitchen.destroy
+        redirect_to root_path
+      end
   end
 
   private
