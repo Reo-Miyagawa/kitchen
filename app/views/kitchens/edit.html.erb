@@ -1,0 +1,27 @@
+<div class="request-edit">
+  <h2 class="edit-title">リクエストを編集する</h2>
+  <%= form_with model: @kitchen, local: true do |f| %>
+
+    <%# 画像 %>
+  <div class="img-upload">
+    <div class="img-text">リクエストイメージ</div>
+    <div class="click-upload"><p>クリックしてファイルをアップロード</p></div>
+    <%= f.file_field :image, id: "item-image" %>
+  </div>
+  <%# ジャンル %>
+  <div class="new-genre">
+    <div class="genre">料理のジャンル</div>
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class: "select-box", id: "select-genre"}) %> 
+  </div>
+  <%# リクエスト名 %>
+  <div class="new-name">
+    <div class="title">リクエスト料理</div>
+    <%= f.text_area :name, id: "title-name", placeholder: "リクエスト料理名 (40文字まで)", maxlengs:"40" %>
+  </div>
+  <%# リクエスト送信ボタン・戻るボタン %>
+  <div class="btn-contents">
+    <%= f.submit "リクエストする", class: "btn" %>
+    <p><%= link_to 'もどる', root_path, class: "back-btn" %></P>
+  </div>
+  <% end %>
+</div>
