@@ -1,0 +1,129 @@
+.cook-idea {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: #e29399;
+  font-size: 40px;
+  margin-top: 10px;
+  padding-bottom: 30px;
+}
+
+.user_name-btn {
+  width: 150px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 8px 0 10px;
+  color: #fafdff;
+  border: 1px solid #fafdff;
+  margin-right: 35px;
+  background-color: #e3d7a3;
+}
+
+.logaut-btn {
+  width: 150px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 8px 0 10px;
+  color: #fafdff;
+  border: 1px solid #fafdff;
+  background-color: #88b5d3;
+  margin-right: 35px;
+}
+
+.login-btn {
+  width: 150px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 8px 0 10px;
+  color: #fafdff;
+  border: 1px solid #fafdff;
+  background-color: #88b5d3;
+}
+
+.sign_in-btn {
+  width: 150px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 8px 0 10px;
+  color: #fafdff;
+  border: 1px solid #fafdff;
+  background-color: #88b5d3;
+}
+
+.menu-btn {
+  width: 150px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 8px 0 10px;
+  color: #fafdff;
+  border: 1px solid #fafdff;
+  background-color: #e29399;
+}
+
+.user {
+  display: flex;
+}
+
+.guide {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.top {
+  // background-image: url("/images/img01.png");
+  height: 100vh;
+  width: 100vw;
+}
+
+.kitchen-img {
+  width: 25vw;
+  height: 25vh;
+  border: 1px solid #000000;
+  margin-top: 30px;
+}
+
+.pick-up {
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: double 8px #eae8e1;/*上線*/
+  border-bottom: double 8px #eae8e1;/*下線*/
+  width: 150px;
+  text-align: center;
+}
+
+.request-list {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.request-contents {
+  padding-top: 50px;
+}
+
+.genre {
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: double 8px #eae8e1;/*上線*/
+  border-bottom: double 8px #eae8e1;/*下線*/
+  width: 200px;
+  display: flex;
+}
+
+.genre-name {
+  margin-left: 30px;
+}
+
+.message {
+  margin-top: 10px;
+}
+
+
