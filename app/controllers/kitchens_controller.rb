@@ -1,5 +1,5 @@
 class KitchensController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: %i[new edit]
 
   def index
     @kitchens = Kitchen.all.order('created_at DESC')
@@ -23,14 +23,25 @@ class KitchensController < ApplicationController
   end
 
   def edit
+    @kitchen = Kitchen.find(params[:id])
+    redirect_to action: :index if current_user.id != @kitchen.user_id
   end
 
   def destroy
     @kitchen = Kitchen.find(params[:id])
-      if current_user.id == @kitchen.user_id
-        @kitchen.destroy
-        redirect_to root_path
-      end
+    if current_user.id == @kitchen.user_id
+      @kitchen.destroy
+      redirect_to root_path
+    end
+  end
+
+  def update
+    @kitchen = Kitchen.find(params[:id])
+    if @kitchen.update(kitchen_params)
+      redirect_to kitchen_path
+    else
+      render :edit
+    end
   end
 
   private
