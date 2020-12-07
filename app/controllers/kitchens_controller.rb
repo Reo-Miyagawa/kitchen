@@ -23,6 +23,7 @@ class KitchensController < ApplicationController
   end
 
   def edit
+    @kitchen = Kitchen.find(params[:id])
   end
 
   def destroy
@@ -35,7 +36,11 @@ class KitchensController < ApplicationController
 
   def update
     @kitchen = Kitchen.find(params[:id])
-    @kitchen.update
+    if @kitchen.update(kitchen_params)
+      redirect_to kitchen_path
+    else
+      render :edit
+    end
   end
 
   private
