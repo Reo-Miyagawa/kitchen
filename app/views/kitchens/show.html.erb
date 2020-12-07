@@ -1,5 +1,3 @@
-<%= render "shared/header" %>
-
 <div class="request-show">
   <% if user_signed_in? && current_user.id == @kitchen.user_id %>
   <%= link_to 'リクエストの編集', edit_kitchen_path(@kitchen.id), method: :get, class: "request-edit-btn" %>
