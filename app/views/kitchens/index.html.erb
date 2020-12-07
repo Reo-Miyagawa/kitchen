@@ -1,19 +1,7 @@
 <div class="top">
-  <div class="user">
-  <%# ログイン・ログアウト・新規登録 %>
-    <% if user_signed_in? %>
-      <%= link_to current_user.name, "#", class: "user_name" %>
-      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logaut" %>
-    <% else %>
-     <%= link_to 'ログイン', new_user_session_path, class: "login" %>
-     <%= link_to '新規登録', new_user_registration_path, class:"sign_in" %>
-    <% end %>
-  </div>
+<%= render "shared/header" %>
 
-  <%# リクエストへ %>
-  <div class="request">
-    <%= link_to 'Request', new_kitchen_path, class: "menu" %>
-  </div>
+  <%# ↑↑↑ここまでを部分テンプレートにする↑↑↑ %>
 
   <%# リクエスト一覧 %>
   <div class="request-contents">
