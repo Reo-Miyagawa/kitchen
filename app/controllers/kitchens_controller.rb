@@ -24,6 +24,7 @@ class KitchensController < ApplicationController
 
   def edit
     @kitchen = Kitchen.find(params[:id])
+    redirect_to action: :index if current_user.id != @kitchen.user_id
   end
 
   def destroy
