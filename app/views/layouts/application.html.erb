@@ -5,11 +5,35 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%# リセットcss %>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+
+    <%# フォント用 %>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <h1 class="cook-idea">Cook idea</h1>
+    <div class="guide">
+      <div class="user">
+        <%# ログイン・ログアウト・新規登録 %>
+        <% if user_signed_in? %>
+        <%= link_to current_user.name, "#", class: "user_name-btn" %>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logaut-btn" %>
+        <% else %>
+        <%= link_to 'ログイン', new_user_session_path, class: "login-btn" %>
+        <%= link_to '新規登録', new_user_registration_path, class:"sign_in-btn" %>
+        <% end %>
+       </div>
+
+        <%# リクエストへ %>
+      <div class="request">
+        <%= link_to 'IDEA', new_kitchen_path, class: "menu-btn" %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
