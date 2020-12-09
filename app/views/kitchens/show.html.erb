@@ -1,26 +1,35 @@
 <div class="request-show">
-  <% if user_signed_in? && current_user.id == @kitchen.user_id %>
-  <%= link_to 'リクエストの編集', edit_kitchen_path(@kitchen.id), method: :get, class: "request-edit-btn" %>
-  <%= link_to 'リクエストの削除', kitchen_path(@kitchen.id), method: :delete, class: 'request-delete-btn' %>
-  <% end %>
-  
-  <table class="detail-table">
-    <tr>
-      <th class="detail-request">リクエスト者</th>
-      <td class="detail-value"><%= @kitchen.user.name %></td>
-    </tr>
-    <tr>
-      <th class="detail-request">リクエスト名</th>
-      <td class="detail-value"><%= @kitchen.name %></td>
-    </tr>
-    <tr>
-      <th class="detail-request">リクエストジャンル</th>
-      <td class="detail-value"><%= @kitchen.genre.name%></td>
-    </tr>
-    <tr>
-      <th class="detail-image">リクエスト画像</th>
-      <td class="detail-img"><%= image_tag @kitchen.image %></td>
-    </tr>
-    <p><%= link_to 'もどる', root_path, class: "back-btn" %></P>
-  </table>
+
+ <%# ボタン %>
+  <div class="show">
+    <% if user_signed_in? && current_user.id == @kitchen.user_id %>
+    <%= link_to 'アイデアの編集', edit_kitchen_path(@kitchen.id), method: :get, class: "request-edit-btn" %>
+    <%= link_to 'アイデアの削除', kitchen_path(@kitchen.id), method: :delete, class: 'request-delete-btn' %>
+    <% end %>
+    <%= link_to 'もどる', root_path, class: "back-btn" %>
+  </div>
+
+
+  <div class="detail-table">
+    <%# 画像 %>
+    <div class="image">
+      <div class="detail-img"><%= image_tag @kitchen.image, class: "value-img" %></div>
+    </div>
+    <%# リクエスト者 %>
+    <div class="name">
+      <div class="detail-name">なまえ
+        <div class="detail-value"><%= @kitchen.user.name %></div>
+      </div>
+    </div>
+    <%# リクエスト名 %>
+    <div class="idea">
+        <div class="detail-idea">ごはん
+          <div class="detail-value"><%= @kitchen.name %></div>
+        </div>
+    </div>
+    <div class="genre">
+      <div class="detail-request">ジャンル</div>
+      <div class="detail-value"><%= @kitchen.genre.name%></div>
+    </div>
+  </div>
 </div>
