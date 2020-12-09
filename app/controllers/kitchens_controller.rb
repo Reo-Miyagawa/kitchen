@@ -44,6 +44,9 @@ class KitchensController < ApplicationController
     end
   end
 
+  def search
+  end
+
   private
 
   def kitchen_params
