@@ -45,6 +45,9 @@ class KitchensController < ApplicationController
   end
 
   def search
+    if params[:applicationId]
+      @kitchens = categories = RakutenWebService::Recipe.small_categories
+    end
   end
 
   private
