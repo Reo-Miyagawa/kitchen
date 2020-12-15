@@ -20,7 +20,42 @@
 .edit-title {
   padding: 0.5em 0;/*上下の余白*/
   border-top: double 8px #eae8e1;/*上線*/
-  border-bottom: double 8px #eae8e1;/*下線*/
   width: 150px;
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.img-text {
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: double 8px #eae8e1;/*上線*/
+  width: 150px;
+  margin-top: 10px;
+}
+
+.new-genre {
+  padding: 0.5em 0;/*上下の余白*/
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.edit-gen {
+  border-top: double 8px #eae8e1;/*上線*/
+  margin-top: 20px;
+}
+
+.new-name {
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: double 8px #eae8e1;/*上線*/
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.request-edit {
+  display: flex;
+}
+
+.btn-contents {
 }
