@@ -1,0 +1,9 @@
+<h1>楽天API</h1>
+<%= form_with(url: search_kitchens_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :applicationId, placeholder: "レシピを検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
+
+<div class="result">
+    <%= render partial: "shared/rakuten" %>
+</div>
